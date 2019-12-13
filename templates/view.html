@@ -1,35 +1,40 @@
 <html>
 
+<head>
+	<title>
+		Chat bitches!!
+	</title>
+</head>>
+
 <body>
 
- 
-
 <h2>Sab Jamaal Hein</h2>
-
- 
 
 <form action="/write">
 
   Enter Text:<br>
-
   <input type="text" name="text1">
-
   <br>
-
-
   <input type="submit" value="Submit">
 
 </form>
 
 
-
+<!--
 <form action="/get">
 
  <input type="submit" value="get">
 
 </form>
 
+-->
 
+
+<h1>Messages</h1>
+
+{% for user in all_users %}
+<p>{{user.text}}</p>
+{% endfor %}
 
 </body>
 

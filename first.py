@@ -28,7 +28,8 @@ class User(db.Model):
 
 @app.route('/')
 def hello_world():
-	return render_template('view.html')
+	users = User.query.all()
+	return render_template('view.html', all_users=users)
 
 @app.route('/write')
 def write_db():
@@ -37,7 +38,9 @@ def write_db():
 	print(textin)
 	db.session.add(user)
 	db.session.commit()
-	return render_template('view.html')
+	render_template('view.html')
+
+'''
 
 @app.route('/get')
 def get_db():
@@ -45,7 +48,7 @@ def get_db():
 	# print(all_text)
 	return render_template('out.html', all_users=users)
 
-
+'''
 
 if __name__ == '__main__':
 	app.run(host='0.0.0.0',port=8080)
