@@ -1,0 +1,61 @@
+<html>
+
+<head>
+	<title>
+		Chat bitches!!
+	</title>
+
+
+<style>
+
+
+body {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 12px;
+  line-height: 30px;
+  color: #777;
+  background: #4CAF50;
+}
+
+</style>
+
+
+
+
+
+
+</head>
+<body>
+
+<h2>Sab Jamaal Hein</h2>
+
+<form action="/write">
+
+  Enter Text:<br>
+  <input type="text" name="text1">
+  <br>
+  <input type="submit" value="Submit">
+
+</form>
+
+
+<!--
+<form action="/get">
+
+ <input type="submit" value="get">
+
+</form>
+
+-->
+
+
+<h1>Messages</h1>
+
+{% for user in all_users %}
+<p>{{user.text}}</p>
+{% endfor %}
+
+</body>
+
+</html>
